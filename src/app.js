@@ -1,11 +1,25 @@
-/* eslint-disable */
-import "bootstrap";
-import "./style.css";
+let who = ["The dog", "My grandma", "His turtle", "My bird"];
+let action = ["ate", "peed", "crushed", "broke"];
+let what = ["my homework", "the keys", "the car"];
+let when = [
+  "before the class",
+  "right on time",
+  "when I finished",
+  "during my lunch",
+  "while I was praying"
+];
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
+let excusa = document.getElementById("excuse");
 
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
-};
+function numeroRandom(nRandom) {
+  let numRam = Math.random() * nRandom.length;
+  numRam = Math.floor(numRam);
+  return numRam;
+}
+
+let primera = who[numeroRandom(who)];
+let segunda = action[numeroRandom(action)];
+let tercera = what[numeroRandom(what)];
+let cuarta = when[numeroRandom(when)];
+
+excusa.innerHTML = primera + " " + segunda + " " + tercera + " " + cuarta;
